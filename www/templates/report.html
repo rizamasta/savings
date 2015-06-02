@@ -1,0 +1,35 @@
+<ion-view view-title="Report Activity Savings">
+
+    <ion-nav-bar class="bar-positive">
+      <ion-nav-back-button>
+      </ion-nav-back-button>
+
+      <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+        </button>
+      </ion-nav-buttons>
+      <ion-nav-buttons side="right">
+        <button class="button button-icon button-clear ion-refresh" on-release="loadData()">
+        </button>
+      </ion-nav-buttons>
+    </ion-nav-bar>
+
+
+  <ion-content>
+    <ion-item class="row">
+      <div>
+        Total Deposit   : {{deposit.total_deposit | number}}<br>
+        Total Debet     : {{debt.total_debt | number}}<br>
+        Total Pay Debet : {{pay_debt.total_pay_debt | number}}<br>
+        <hr>
+        Total Saldo     : {{saldo | number}}<br>
+        Total Hutang    : {{debt.total_debt-pay_debt.total_pay_debt | number}}
+      </div>
+    </ion-item>
+  </ion-content>
+  <ion-content style="padding-top: 140px">
+    <ion-item ng-repeat="item in report" class="text-right">
+      Jumlah {{item.type_trx}}&nbsp;{{item.jumlah | number}} pada {{item.tanggal}}
+    </ion-item>
+  </ion-content>
+ </ion-view>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+  <title>Login</title>
+
+ <!-- your app's js -->
+
+</head>
+
+<body>
+<ion-content>
+  <form ng-submit="loginTask()">
+    <div class="list">
+      <center>
+        <h3>&nbsp;</h3>
+      </center>
+      <center>
+        <h3>Login</h3>
+      </center>
+    </div>
+    <div class="rounded padding">
+      <label class="item item-input ">
+        <input type="text" placeholder="Username" ng-model="form.username">
+      </label>
+    </div>
+    <div class="rounded padding">
+      <label class="item item-input ">
+        <input type="password" placeholder="Password Anda" ng-model="form.password">
+      </label>
+    </div>
+    <div class="padding">
+      <button type="submit" class="button button-block button-positive">Login</button>
+    </div>
+
+    <div class="activated padding" ng-show="authMsg">
+      <ion-item class="padding" style="background-color: #ef473a">
+        <div style="color: #f7f7f7;text-align: center;text-decoration: double">
+          {{authMsg}}
+        </div>
+      </ion-item>
+    </div>
+  </form>
+</ion-content>
+</body>
+</html>
+
